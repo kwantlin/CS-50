@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h1>Matches</h1>
+    <br>
+    <br>
+        </div>
+         <center>
+         <h3>Searching? & Nearby - {{loc1}}, {{loc2}}, {{loc3}}, and {{house}}</h3>
+         <div class = "onlineListWrapper">
+
+        <ul id = "myUL2">
+            {% for v in onlinematches %}
+            <li class = "index"><a href="#">{{v["fname"]}} {{v["lname"]}} - {{v["contactinfo"]}}</a> ({{v["house"]}})</li>
+            {% endfor %}
+        </ul>
+</center>
+        </div>
+
+
+         <br>
+         <br>
+         <br>
+    <h3>By Class - Similar Concentration and Study Times</h3>
+    <center>
+        <div>
+        {% for key, value in matches.items(): %}
+
+        <div class = "listWrapper">
+
+        <center>
+         <h4>{{key}}</h4>
+
+        </center>
+        <ul id="myUL">
+            {% for v in value %}
+            <li class = "index"><a href="#">{{v["fname"]}} {{v["lname"]}} - {{v["contactinfo"]}}</a></li>
+            {% endfor %}
+        </ul>
+
+        </div>
+        &nbsp;
+
+         {% endfor %}
+
+
+
+
+
+</center>
+      <!--  {% for key, value in matches.items(): %}-->
+      <!--  <div class = "listWrapper">-->
+      <!--  <center>-->
+
+      <!--  Class 1-->
+      <!--  </center>-->
+      <!--  <br>-->
+
+      <!--  <ul>-->
+      <!--      {% for v in row %}-->
+      <!--      <li class = "index">{{v["fname"]}} {{v["lname"]}} - {{v["contactinfo"]}}</li>-->
+      <!--      {% endfor %}-->
+      <!--</ul>-->
+      <!--  {% endfor %}-->
+      <!--  </div>-->
+
+{% endblock %}
+
+

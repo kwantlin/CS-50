@@ -1,0 +1,206 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Preferences
+{% endblock %}
+
+{% block main %}
+    <form action="/pref" method="post">
+        <div class="form-group">
+            <center>
+                <h5>Personal</h5>
+            </center>
+            <input autofocus class="form-control" name="fname" placeholder = "First Name" type="text" value = {{fname}} >
+            &nbsp;
+            <input autofocus class="form-control" name="lname" placeholder = "Last Name" type="text" value = {{lname}}>
+             &nbsp;
+            <select name="contactmethod">
+                  <option value="email"{{email}}>Email</option>
+                  <option value="phone"{{phone}}>Phone</option>
+                  <option value="fb"{{fb}}>Facebook</option>
+                  <option value="other"{{other}}>Other</option>
+            </select>
+             &nbsp;
+            <input autofocus class="form-control" name="contactinfo" placeholder="Username/Number/..." type="text" value = {{contactinfo}}>
+
+             &nbsp;
+
+            <input type="checkbox" name="online" {{online}}> Searching?
+
+            <br>
+            <br>
+            <center>
+                <h5>Harvard Intro</h5>
+            </center>
+            <br>
+            <select name="year">
+                  <option value="first_year"{{first_year}}>First-Year</option>
+                  <option value="sophomore"{{sophomore}}>Sophomore</option>
+                  <option value="junior "{{junior}}>Junior</option>
+                  <option value="senior"{{senior}}>Senior</option>
+            </select>
+            &nbsp;
+            <select name="conc">
+                  <option value="aaas"{{aaas}}>African and African American Studies</option>
+                  <option value="anthro"{{anthro}}>Anthropology</option>
+                  <option value="am"{{am}}>Applied Mathematics</option>
+                  <option value="afvs"{{afvs}}>Art, Film, and Visual Studies</option>
+                  <option value="astro"{{astro}}>Astrophysics</option>
+                  <option value="beng"{{beng}}>Biomedical Engineering</option>
+                  <option value="chemphysbio"{{chemphysbio}}>Chemical and Physical Biology</option>
+                  <option value="chem"{{chem}}>Chemistry</option>
+                  <option value="chemphys"{{chemphys}}>Chemistry and Physics</option>
+                  <option value="classics"{{classics}}>Classics</option>
+                  <option value="complit"{{complit}}>Comparative Literature</option>
+                  <option value="cs"{{cs}}>Computer Science</option>
+                  <option value="eps"{{eps}}>Earth and Planetary Sciences</option>
+                  <option value="eas"{{eas}}>East Asian Studies</option>
+                  <option value="econ"{{econ}}>Economics</option>
+                  <option value="ee"{{ee}}>Electrical Engineering</option>
+                  <option value="es"{{es}}>Engineering Sciences</option>
+                  <option value="eng"{{eng}}>English</option>
+                  <option value="ese"{{ese}}>Environmental Science and Engineering</option>
+                  <option value="espp"{{espp}}>Environmental Science and Public Policy</option>
+                  <option value="folk"{{folk}}>Folklore and Mythology</option>
+                  <option value="german"{{german}}>Germanic Languages and Literatures</option>
+                  <option value="gov"{{gov}}>Government</option>
+                  <option value="hist"{{hist}}>History</option>
+                  <option value="histlit"{{histlit}}>History and Literature</option>
+                  <option value="histsci"{{histsci}}>History and Science</option>
+                  <option value="histart"{{histart}}>History of Art and Architecture</option>
+                  <option value="hdrb"{{hdrb}}>Human Developmental and Regenerative Biology</option>
+                  <option value="heb"{{heb}}>Human Evolutionary Biology</option>
+                  <option value="ib"{{ib}}>Integrative Biology</option>
+                  <option value="ling"{{ling}}>Linguistics</option>
+                  <option value="math"{{math}}>Mathematics</option>
+                  <option value="me"{{me}}>Mechanical Engineering</option>
+                  <option value="mcb"{{mcb}}>Molecular and Cellular Biology</option>
+                  <option value="music"{{music}}>Music</option>
+                  <option value="neareast"{{neareast}}>Near Eastern Languages and Civilizations</option>
+                  <option value="neuro"{{neuro}}>Neuroscience</option>
+                  <option value="phil"{{phil}}>Philosophy</option>
+                  <option value="physics"{{physics}}>Physics</option>
+                  <option value="psych"{{psych}}>Psychology</option>
+                  <option value="religion"{{religion}}>Religion, Comparative Study of</option>
+                  <option value="romance"{{romance}}>Romance Languages and Literatures</option>
+                  <option value="slavic"{{slavic}}>Slavic Languages and Literatures</option>
+                  <option value="ss"{{ss}}>Social Studies</option>
+                  <option value="socio"{{socio}}>Sociology</option>
+                  <option value="sas"{{sas}}>South Asian Studies</option>
+                  <option value="special"{{special}}>Special Concentrations</option>
+                  <option value="stat"{{stat}}>Statistics</option>
+                  <option value="tdm"{{tdm}}>Theater, Dance, and Media</option>
+                  <option value="wgs"{{wgs}}>Women, Gender, and Sexuality, Studies of</option>
+            </select>
+            &nbsp;
+            <select name="house">
+                  <option value="adams"{{adams}}>Adams</option>
+                  <option value="cabot"{{cabot}}>Cabot</option>
+                  <option value="currier"{{currier}}>Currier</option>
+                  <option value="dunster"{{dunster}}>Dunster</option>
+                  <option value="dudley"{{dudley}}>Dudley</option>
+                  <option value="eliot"{{eliot}}>Eliot</option>
+                  <option value="kirkland"{{kirkland}}>Kirkland</option>
+                  <option value="leverett"{{leverett}}>Leverett</option>
+                  <option value="lowell"{{lowell}}>Lowell</option>
+                  <option value="mather"{{mather}}>Mather</option>
+                  <option value="pfoho"{{pfoho}}>Pforzheimer</option>
+                  <option value="quincy"{{quincy}}>Quincy</option>
+                  <option value="winthrop"{{winthrop}}>Winthrop</option>
+                  <option value="apley"{{apley}}>Apley</option>
+                  <option value="canaday"{{canaday}}>Canaday</option>
+                  <option value="dew"{{dew}}>Dewolfe</option>
+                  <option value="grays"{{grays}}>Grays</option>
+                  <option value="green"{{green}}>Greenough</option>
+                  <option value="hollis"{{hollis}}>Hollis</option>
+                  <option value="holworthy"{{holworthy}}>Holworthy</option>
+                  <option value="hurlbut"{{hurl}}>Hurlbut</option>
+                  <option value="lionel"{{lionel}}>Lionel</option>
+                  <option value="massachusetts"{{massachusetts}}>Massachusetts</option>
+                  <option value="matthews"{{matthews}}>Matthews</option>
+                  <option value="mower"{{mower}}>Mower</option>
+                  <option value="pennypacker"{{pennypacker}}>Pennypacker</option>
+                  <option value="stoughton"{{stoughton}}>Stoughton</option>
+                  <option value="straus"{{straus}}>Straus</option>
+                  <option value="thayer"{{thayer}}>Thayer</option>
+                  <option value="weld"{{weld}}>Weld</option>
+                  <option value="wigg"{{wigg}}>Wigglesworth</option>
+            </select>
+
+            <br>
+            <br>
+         <center>
+                <h5>Current Classes - check MyHarvard for course codes!</h5>
+            </center>
+            <br>
+            Class 1: <input autofocus class="form-control" name="class1" placeholder="Ex: COMPSCI50" type="text" value = {{class1}}>
+            <br>
+            Class 2: <input autofocus class="form-control" name="class2" placeholder="Ex: APMTH121" type="text" value = {{class2}}>
+            <br>
+            Class 3: <input autofocus class="form-control" name="class3" placeholder="Ex: CHNSE130A" type="text" value = {{class3}}>
+            <br>
+            Class 4: <input autofocus class="form-control" name="class4" placeholder="Ex: BCMP200" type="text" value = {{class4}}>
+            <br>
+            Class 5: <input autofocus class="form-control" name="class5" placeholder="Ex: ANTHRO2653" type="text" value = {{class5}}>
+            <br>
+            Class 6: <input autofocus class="form-control" name="class6" placeholder="Ex: CELLBIO306" type="text" value = {{class6}}>
+
+            <br>
+            <br>
+            <center>
+                <h5>Preferred Study Locations</h5>
+            </center>
+            <br>
+            <select name="loc1">
+                  <option value="house1"{{house1}}>House Library</option>
+                  <option value="widener1"{{widener1}}>Widener</option>
+                  <option value="barker1"{{barker1}}>Barker</option>
+                  <option value="md1"{{md1}}>Maxwell Dworkin</option>
+                  <option value="other1"{{other1}}>Other</option>
+            </select>
+            &nbsp;
+            <select name="loc2">
+                  <option value="house2"{{house2}}>House Library</option>
+                  <option value="widener2"{{widener2}}>Widener</option>
+                  <option value="barker2"{{barker2}}>Barker</option>
+                  <option value="md2"{{md2}}>Maxwell Dworkin</option>
+                  <option value="other2"{{other2}}>Other</option>
+            </select>
+            &nbsp;
+            <select name="loc3">
+                  <option value="house3"{{house3}}>House Library</option>
+                  <option value="widener3"{{widener3}}>Widener</option>
+                  <option value="barker3"{{barker3}}>Barker</option>
+                  <option value="md3"{{md3}}>Maxwell Dworkin</option>
+                  <option value="other3"{{other3}}>Other</option>
+            </select>
+            &nbsp;
+        <!--    <input id="ex19" type="text"-->
+        <!--      data-provide="slider"-->
+        <!--      data-slider-ticks="[1, 2, 3]"-->
+        <!--      data-slider-ticks-labels='["not very impt", "indifferent", "very impt"]'-->
+        <!--      data-slider-min="1"-->
+        <!--      data-slider-max="3"-->
+        <!--      data-slider-step="1"-->
+        <!--      data-slider-value="3"-->
+        <!--      data-slider-tooltip="hide" />-->
+
+            <br>
+            <br>
+            <center>
+                <h5>Preferred Study Times</h5>
+            </center>
+            <br>
+            <input type="checkbox" name="morn" id='morn' {{morn}}> Morning (9AM-12PM)&nbsp;
+            <input type="checkbox" name="aft" id='aft' {{aft}}> Afternoon (12PM-5PM) &nbsp;
+            <input type="checkbox" name="eve" id='eve' {{eve}}> Evening (5PM-8PM)&nbsp;
+            <input type="checkbox" name="night" id='night' {{night}}> Night (8PM-12AM) &nbsp;
+            <input type="checkbox" name="latenight" id='latenight' {{latenight}}> Late night (12AM- )
+
+            <br>
+            <br>
+
+        </div>
+        <button class="btn btn-primary" type="submit">Update</button>
+    </form>
+{% endblock %}
