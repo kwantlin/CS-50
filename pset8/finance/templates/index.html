@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <h1>Index</h1>
+    <table style="width:100%">
+        <tr>
+            <th>Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+            <th>Time</th>
+        </tr>
+        {% for row in history %}
+        <tr>
+            <td>{{row["symbol"]}}</td>
+            <td>{{row["names"]}}</td>
+            <td>{{row["SUM(shares)"]}}</td>
+            <td>{{row["price"]}}</td>
+            <td>{{row["SUM(total)"]}}</td>
+            <td>{{row["time"]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

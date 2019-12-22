@@ -1,0 +1,124 @@
+.styling{
+background-color: #fff;
+background-image:
+linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+linear-gradient(#eee .1em, transparent .1em);
+background-size: 100% 1.2em;
+font-family: Courier;
+word-wrap: normal
+}
+/*https://leaverou.github.io/css3patterns/#lined-paper*/
+ul, li, {
+    padding:0;
+    margin:0;
+    float: left;
+    text-align: left;
+    margin: 5;
+    display: inline-block;
+    margin = 1px
+}
+.index{
+    list-style:square;
+    text-transform: capitalize;
+}
+.listWrapper {
+    max-height:300px;
+    max-width:350px;
+    overflow-y:auto;
+    overflow-x:auto;
+    width: 15%;
+    background-color: lightblue;
+    float: left;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    text-align: left;
+    font-size:12px;
+
+}
+
+
+#myInput{
+color: black;
+background-color: lightblue;
+width: 120%;
+}
+
+#myInput2{
+color: black;
+background-color: lightblue;
+width: 120%;
+}
+
+h4{
+    font-size: 18px;
+}
+.onlineListWrapper {
+    max-height:100px;
+    overflow-y:auto;
+    overflow-x:auto;
+    width: 60%;
+    background-color: lightblue;
+    box-sizing: border-box;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    text-align: left;
+    max-height:500px;
+
+}
+/*li:nth-child(even){*/
+/*  background:#ccc;*/
+
+/*  text-align: left;*/
+/*}*/
+
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+}
+
+/* colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
